@@ -6,6 +6,7 @@ import { GetUsers, DeleteUserByID } from "../../services/https";
 import { UsersInterface } from "../../interfaces/IUser";
 import { Link, useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
+import '../../App.css';
 
 function Customers() {
   const columns: ColumnsType<UsersInterface> = [
@@ -20,7 +21,7 @@ function Customers() {
       key: "profile",
       width: "15%",
       render: (text, record, index) => (
-        <img src={record.Profile} className="w3-left w3-circle w3-margin-right" width="100%" />
+        <img src={record.Profile} className="w3-left w3-circle w3-margin-right" id="profileImage" width="100%" />
       )
     },
     {
